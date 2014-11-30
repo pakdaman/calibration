@@ -8,7 +8,9 @@ function [ bbq ] = build( PTR, YTR, options )
         scoringFunc = options.scoringFunc;
     else
         scoringFunc = 'BDeu2';
-        % Special case of BDeu inwhich N0 = 2B where B is number of bins
+        % Special case of BDeu in which N0 = 2B where B is number of bins
+        % This is equivalent to have 2 fake samples in each bins
+        % This is the default setting that used in the paper
     end
     
     
