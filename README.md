@@ -5,7 +5,7 @@ How to use BBQ Matlab Code:
 
 + Run test.m
 % A sample code showing how to build a BBQ model and use it
-% As a sanity chech the output should match the output.txt
+% As a sanity check the output should match the output.txt
 
 Two main Functions:
 ===========
