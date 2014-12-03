@@ -1,11 +1,14 @@
-calibration
-===========
 
-BBQ Matlab Code
+Quick Start 
+===========
+How to use BBQ Matlab Code:
 
 + Run test.m
-% A sample code to how to build a BBQ model and use it
+% A sample code showing how to build a BBQ model and use it
 
+
+Two main Functions:
+===========
 + build.m :
 function [ bbq ] = build( PTR, YTR, options )
 % This function is used to build BBQ model

@@ -9,7 +9,7 @@ M =
      MCE: 0.8180
      ECE: 0.2681
 
-
+Starting parallel pool (parpool) using the 'local' profile ... connected to 12 workers.
 Performance of Calibrated Probabilities using BBQ : 
 
 M_bbq = 
