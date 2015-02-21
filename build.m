@@ -58,15 +58,7 @@ function [ bbq ] = build( PTR, YTR, options )
     opt1.PTR = PTR;
     opt1.lnfact = lnfact;
     opt1.N0 = N0;
-    if strcmp(scoringFunc,'K2')
-        scoreFunc = @getK2Score_local;
-    elseif strcmp(scoringFunc,'AIC')
-        scoreFunc = @getAICScore_local;
-    elseif strcmp(scoringFunc,'AICc')
-        scoreFunc = @getAICcScore_local;
-    elseif strcmp(scoringFunc,'BIC')
-        scoreFunc = @getBICScore_local;
-    elseif strcmp(scoringFunc,'BDeu') % N0 = 2 by default
+    if strcmp(scoringFunc,'BDeu') % N0 = 2 by default
         scoreFunc = @getBDeuScore_local;
     elseif strcmp(scoringFunc,'BDeu2') % N0 = 2B by default (the version that used in the paper)
         scoreFunc = @getBDeuScore2_local;    
@@ -159,44 +151,6 @@ function [ score ] = getBDeuScore_local( opt )
 %     x = log(B/(opt.N^(1/3)));
 %     score = score + log(normpdf(x,0,0.75));
 % end of adding prior
-    score = -2*score;
-end
-
-function [ score ] = getAICcScore_local( opt )
-    logLikelihood = opt.logLikelihood;
-    N = opt.N;
-    K = opt.K;
-    score = 2*K - 2*logLikelihood + 2*K*(K+1)/(N-K-1);
-end
-
-
-function [ score ] = getBICScore_local( opt )
-    logLikelihood = opt.logLikelihood;
-    N = opt.N;
-    K = opt.K;
-    score = -2*logLikelihood + K *(log(N)+log(2*pi));
-end
-
-
-function [ score ] = getK2Score_local( opt )
-    histModel = opt.histModel;
-    lnfact = opt.lnfact;
-    
-    score = 0;
-    % Firs Compute lnMarginal
-    B = length(histModel);
-    
-    for b=1:B
-        U = [histModel{b}.n0, histModel{b}.n1];
-        score = score + lnMarginalLikelihood_local(U , lnfact);
-    end
-    
-% I can add the effect of structural prior here, however I use uniform
-% prior for now
-%     x = log(B/(opt.N^(1/3)));
-%     score = score + log(normpdf(x,0,0.75));
-% end of adding prior
-
     score = -2*score;
 end
 
