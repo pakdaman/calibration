@@ -1,7 +1,7 @@
 clear; clc;
 load data;
 
-%% Apply linear the Logistic regression model to make predictions
+%% Apply linear SVM regression model to make predictions
 disp('Using Linear SVM ')
 svmStruct = svmtrain(XTR,YTR,'ShowPlot',true);
 title('Linear SVM')
@@ -20,7 +20,7 @@ disp('Performance of Calibrated Probabilities using BBQ : ')
 M_bbq = getMeasures(PTE_bbq,YTE)
 
 
-%% Apply Quadratic the Logistic regression model to make predictions
+%% Apply Quadratic SVM regression model to make predictions
 disp('Using Quadratic SVM ')
 figure;
 svmStruct = svmtrain(XTR,YTR,'Kernel_Function','polynomial','Polyorder',2, 'ShowPlot',true);
