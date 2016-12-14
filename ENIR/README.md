@@ -4,7 +4,7 @@ This is a Matlab+R implementation of ENIR code.
 This is a temporary code, and it will be replaced with a single R package "enir" soon.
 To run the code you should first install the neariso R package which the implementation of nearly isotonic regression model referenced inside our icdm paper. 
 A version that we used in our experiments is provided in this github repository.
-+I have tested the code and it runs properly on R version 3.1.2 (2014-10-31) -- "Pumpkin Helmet"
+The code runs properly on R version 3.1.2 (2014-10-31) -- "Pumpkin Helmet"
  and Matlab version 8.4.0.150421 (R2014b)
 
 
