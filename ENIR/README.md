@@ -1,9 +1,9 @@
-Dependencies 
+Preface 
 ===========
-This is a Matlab+R implementation of ENIR code. 
-This is a temporary code, and it will be replaced with a single R package "enir" soon.
+This is a Matlab+R implementation of ENIR code. This is a research code and there is not guarantee on using the code.
+This code will be replaced with a single R package "enir" soon.
 To run the code you should first install the neariso R package referenced inside our icdm paper. 
-A version that we used in our experiments is also provided in this repo.
+For the sake of completeness, a version of neariso R package that is used in our experiments is also provided in this repository (neariso_1.0.tar.gz).
 The code runs properly on R version 3.1.2 (2014-10-31) -- "Pumpkin Helmet"
  and Matlab version 8.4.0.150421 (R2014b)
 
