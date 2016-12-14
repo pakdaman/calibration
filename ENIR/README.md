@@ -40,6 +40,6 @@ function [ out ] = predict( enir, PTE, option )
 References 
 ===========
 
-Mahdi Pakdaman Naeini, G. F. Cooper. "Binary Classifier Calibration using an Ensemble of Near Isotonic Regression Models”, 
+Mahdi Pakdaman Naeini, Gregory F. Cooper. "Binary Classifier Calibration using an Ensemble of Near Isotonic Regression Models”, 
 IEEE Internation Conference on Data Mining (ICDM), Barcelona, Spain, December 2016.
 
