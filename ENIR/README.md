@@ -1,5 +1,4 @@
-
-Quick Start 
+Dependencies 
 ===========
 This is a Matlab+R implementation of ENIR code. 
 This is a temporary code, and it will be replaced with a single R package "enir" soon.
