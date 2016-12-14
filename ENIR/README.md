@@ -1,7 +1,10 @@
 
 Quick Start 
 ===========
-How to use BBQ Matlab Code:
+This is a Matlab+R implementation of ENIR code. 
+This is a temporary code and it will be replaced with a single R package enir soon.
+
+How to use ENIR Matlab Code:
 
 + First Run test.m
 % A sample code showing how to build a BBQ model and use it
@@ -10,14 +13,14 @@ How to use BBQ Matlab Code:
 Two main Functions:
 ===========
 + build.m :
-function [ bbq ] = build( PTR, YTR, options )
+function [ enir ] = build( PTR, YTR, options )
 % This function is used to build BBQ model
 % Input:
 %   PTR: Vector of predicted values
 %   YTR: Vector of true labels {0,1}
 %   Options: a Structure that includes optional choices
 % Output:
-%   bbq: the BBQ moded
+%   enir: the ENIR moded
 
 + predict.m:
 function [ out ] = predict( bbq, PTE, option )
