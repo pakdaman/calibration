@@ -2,8 +2,8 @@ Dependencies
 ===========
 This is a Matlab+R implementation of ENIR code. 
 This is a temporary code, and it will be replaced with a single R package "enir" soon.
-To run the code you should first install the neariso R package which the implementation of nearly isotonic regression model referenced inside our icdm paper. 
-A version that we used in our experiments is provided in this github repository.
+To run the code you should first install the neariso R package referenced inside our icdm paper. 
+A version that we used in our experiments is also provided in this repo.
 The code runs properly on R version 3.1.2 (2014-10-31) -- "Pumpkin Helmet"
  and Matlab version 8.4.0.150421 (R2014b)
 
@@ -11,9 +11,9 @@ The code runs properly on R version 3.1.2 (2014-10-31) -- "Pumpkin Helmet"
 Quick Start 
 ===========
 How to use ENIR Matlab Code:
-
 + First Run test.m
 % A sample code showing how to build a ENIR model and use it
+
 
 Two main Functions:
 ===========
@@ -36,3 +36,10 @@ function [ out ] = predict( enir, PTE, option )
 %       - option: 0 use model selection, 1 use model Averaging   
 % Output:
 %       - out : vector of calibrated probabilities
+
+References 
+===========
+
+Mahdi Pakdaman Naeini, G. F. Cooper. "Binary Classifier Calibration using an Ensemble of Near Isotonic Regression Models”, 
+IEEE Internation Conference on Data Mining (ICDM), Barcelona, Spain, December 2016.
+
