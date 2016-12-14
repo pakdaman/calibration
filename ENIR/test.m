@@ -15,7 +15,7 @@ M = getMeasures(PTE,YTE)
 % Build ENIR Model
 ENIR = build(PTR, YTR);
 PTE_enir = predict(ENIR, PTE, 1);
-disp('Performance of Calibrated Probabilities using BBQ : ')
+disp('Performance of Calibrated Probabilities using ENIR : ')
 M_enir = getMeasures(PTE_enir,YTE)
 
 
@@ -37,7 +37,7 @@ ENIR = build(PTR, YTR);
 
 % Calibrated the prediction using BBQ
 PTE_enir = predict(ENIR, PTE, 1);
-disp('Performance of Calibrated Probabilities using BBQ : ')
+disp('Performance of Calibrated Probabilities using ENIR : ')
 M_enir = getMeasures(PTE_enir,YTE)
 
 disp('End!')

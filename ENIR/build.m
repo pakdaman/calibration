@@ -29,12 +29,46 @@ function [ enir ] = build( PTR, YTR, bname, option, alpha )
 %     y = Data(:,1);
 %     z = Data(:,2);
     
+    dname = './csv/';
+    % Fist delete the existing temporary files
+    try
+        fname = [dname,bname,'_','z.csv'];
+        delete(fname);
+    catch
+    end
+    
+    try
+        fname = [dname,bname,'_','y.csv'];
+        delete(fname);
+    catch
+    end
+    
+    try
+        fname = [dname,bname,'_','df.csv'];
+        delete(fname);
+    catch
+    end
+    
+    try
+        fname = [dname,bname,'_','lambda.csv'];
+        delete(fname);
+    catch
+    end
+    
+    try
+        fname = [dname,bname,'_','beta.csv'];
+        delete(fname);
+    catch
+    end 
+    
+    
+    
     [y, idx ] = sort(PTR,'ascend');
     z = YTR(idx);
     
     [uy, Iy, Iuy] = unique(y); % Unique y
     %   uy = y(Iy) and y = uy(Iuy).
-    dname = './csv/';
+    
     fname = [dname,bname,'_','z.csv'];
     dlmwrite(fname, z, 'delimiter', ',', 'precision', 50);
     
@@ -65,7 +99,7 @@ function [ enir ] = build( PTR, YTR, bname, option, alpha )
     else
         error('Error in running the R module')
     end
-%     Making sure that the predicted values follow rule of probs
+%    Just to Make sure that the predicted values follow rule of probs
     beta = max(beta,0);
     beta = min(beta,1);
     
@@ -129,7 +163,7 @@ function [ enir ] = build( PTR, YTR, bname, option, alpha )
     
     
     % This part is added to smooth the bin estimates using beta prior like
-    % what we did in BBQ (We hope to prevent Inf in logloss using this trick)
+    % what we did in BBQ 
     model.beta = smooth_beta_local(model);
     
 %     WE can do shoulder method as we did for BBQ
