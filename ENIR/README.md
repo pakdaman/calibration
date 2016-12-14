@@ -2,19 +2,25 @@
 Quick Start 
 ===========
 This is a Matlab+R implementation of ENIR code. 
-This is a temporary code and it will be replaced with a single R package enir soon.
+This is a temporary code, and it will be replaced with a single R package "enir" soon.
+To run the code you should first install the neariso R package which the implementation of nearly isotonic regression model referenced inside our icdm paper. 
+A version that we used in our experiments is provided in this github repository.
++I have tested the code and it runs properly on R version 3.1.2 (2014-10-31) -- "Pumpkin Helmet"
+ and Matlab version 8.4.0.150421 (R2014b)
 
+
+Quick Start 
+===========
 How to use ENIR Matlab Code:
 
 + First Run test.m
-% A sample code showing how to build a BBQ model and use it
-% As a sanity check the output should match the output.txt
+% A sample code showing how to build a ENIR model and use it
 
 Two main Functions:
 ===========
 + build.m :
 function [ enir ] = build( PTR, YTR, options )
-% This function is used to build BBQ model
+% This function is used to build ENIR model
 % Input:
 %   PTR: Vector of predicted values
 %   YTR: Vector of true labels {0,1}
@@ -23,10 +29,10 @@ function [ enir ] = build( PTR, YTR, options )
 %   enir: the ENIR moded
 
 + predict.m:
-function [ out ] = predict( bbq, PTE, option )
+function [ out ] = predict( enir, PTE, option )
 % This function used for calibrating the probabilities
 % Input: 
-%       - bbq: the BBQ model 
+%       - enir: the ENIR model 
 %       - PTE : vector of Uncalibrated probabilities
 %       - option: 0 use model selection, 1 use model Averaging   
 % Output:
