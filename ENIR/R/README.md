@@ -30,17 +30,20 @@ yTest: vector of uncalibratd classification scores
 
 
 output:
+
 res: corresponding calibrated scores obtained using the ENIR calibration model
 
 
 + enir:getMeasures(y, z);
 
 Input:
+
 y: vector of predictions (classification scores) which is in the interval [0, 1]
 
 z: vector of true class of instances {0,1}
 
 Output: 
+
 a list of evaluation measures including (RMSE, AUC, ACC, MCE, ECE)
 
 References 
