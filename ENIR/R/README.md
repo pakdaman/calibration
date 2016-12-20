@@ -12,28 +12,34 @@ repository (enir_1.0.tar.gz).
 Two main methods:
 ===========
 + enir::build(yTrain, zTrain);
-Input:
 
-Output:
+- Input:
+
+- Output:
 
 
 
 
 + enir::predict(enirModel, yTest);
-Input: 
+
+- Input: 
+
 enirModel: a ENIR calibration model generated using the "enir::build()" method
+
 yTest: vector of uncalibratd classification scores
 
-output:
+
+- output:
 res: corresponding calibrated scores obtained using the ENIR calibration model
 
 
 + enir:getMeasures(y, z);
-Input:
+- Input:
 y: vector of predictions (classification scores) which is in the interval [0, 1]
+
 z: vector of true class of instances {0,1}
 
-Output: 
+- Output: 
 a list of evaluation measures including (RMSE, AUC, ACC, MCE, ECE)
 
 References 
