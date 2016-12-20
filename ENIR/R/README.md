@@ -13,7 +13,7 @@ In order to run the sample.R, you should install the "R.matlab", and "e1071" in 
 install.packages("e1071", dependencies = TRUE)
 install.packages("R.matlab", dependencies = TRUE)
 
-Two main methods:
+Two main methods + a utility function:
 ===========
 + enir.build(yTrain, zTrain);
 
@@ -27,7 +27,6 @@ option: 'BIC' (default) , 'AIC', or 'AICc' scoring functions.
 --Output:
 
 A list of parameters that indicate the enir model
-
 
 
 
