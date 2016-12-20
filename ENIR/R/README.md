@@ -30,7 +30,7 @@ A list of parameters that indicate the enir model
 
 
 
-+ enir.predict(enirModel, yTest);
++ enir.predict(enirModel, yTest, option);
 
 --Input: 
 
@@ -38,6 +38,7 @@ enirModel: a ENIR calibration model generated using the "enir::build()" method
 
 yTest: vector of uncalibratd classification scores
 
+option: set it to 1 (default) for running model averaging, and to 0 for running model selection
 
 --output:
 
