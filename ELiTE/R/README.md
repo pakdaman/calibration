@@ -1,13 +1,10 @@
 Preface 
 ===========
 This is a research code and there is not guarantee on using the code.
-This code includes an R package "ELiTE" that implements our ELiTE calibration method in our SDM 2016 paper.
-To run the code you should first install the glmgen  package referenced inside our sdm paper. 
-For the convenience, a version of glmgen R package that is used in our experiments is 
+This code includes an R package "ELiTE" that implements our ELiTE calibration method described in our SDM 2016 paper.
+To run the code you should first install the glmgen  package referenced inside our sdm paper (https://github.com/statsmaths/glmge). For the sake of completeness, a version of glmgen R package that is used in our experiments is 
 also provided in this repository (glmgen_elite.tar.gz). You should then install the ELiTE package which is also included in this
-repository (ELiTE_1.0.tar.gz).
-
-You can then run the sample.R file for an example code of using the enir package.
+repository (ELiTE_1.0.tar.gz). You can then run the sample.R file for an example code of using the enir package.
 In order to run the sample.R, you should install the "R.matlab", and "e1071" in R using the following commands:
 
 install.packages("e1071", dependencies = TRUE)
